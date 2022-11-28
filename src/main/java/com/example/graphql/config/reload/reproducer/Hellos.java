@@ -1,9 +1,10 @@
 package com.example.graphql.config.reload.reproducer;
 
-import jakarta.inject.Inject;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.graphql.GraphQLApi;
 import org.eclipse.microprofile.graphql.Query;
+
+import javax.inject.Inject;
 
 @GraphQLApi
 public class Hellos {
