@@ -14,3 +14,9 @@ Shows the issue [#1591](https://github.com/smallrye/smallrye-graphql/issues/1591
 8. Redo the GraphQL call, the message is now also `hello again`, but it should be `System error`, as the exception message should not be shown anymore.
 9. Restart the WildFly.
 10. If you redo the call again, the message is now `System error`.
+
+It works with the MP REST Client:
+1. Call `http ':8080/indirect'`. It returns `ho, Jane`.
+2. Change the `api/mp-rest/uri` config to something invalid.
+3. Rebuild and redeploy (without restarting)
+4. Redo the REST call and it fails, as the config for that endpoint is now invalid.
