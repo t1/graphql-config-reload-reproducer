@@ -6,10 +6,10 @@ import org.eclipse.microprofile.graphql.Query;
 import org.eclipse.microprofile.metrics.annotation.Counted;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.QueryParam;
 import java.io.Closeable;
 
 @Path("/")
@@ -33,6 +33,7 @@ public class Hellos {
         String hi(@QueryParam("whom") String whom);
     }
 
+    @Query
     @GET @Path("/hi")
     public String hi(@QueryParam("whom") String whom) {return "ho, " + whom;}
 }
